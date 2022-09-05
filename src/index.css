@@ -14,27 +14,3 @@ code {
     monospace;
 }
 
-.App {
-  background-color: antiquewhite;
-  background-size: 100%;
-  height: 1170px;
-  min-width: 1366px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-size: 30px;
-}
-
-.message {
-  list-style-type: none;
-}
-
-input {
-  padding: 10px;
-  font-size: 20px;
-}
-
-button {
-  border: 1px solid #fff;
-  padding: 16px;
-}

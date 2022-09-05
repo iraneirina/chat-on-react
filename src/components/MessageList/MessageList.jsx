@@ -1,10 +1,12 @@
+import { List, ListItem } from '@mui/material';
+
 export const MessageList = ({ messages }) => {
   return (
-    <ul>
+    <List>
       {messages.map((message, idx) => (
-        <li className="message" key={idx}>
-          {message.author}: {message.value}</li>
+        <ListItem className="message" key={idx}>
+          {message.author}: {message.value}</ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
