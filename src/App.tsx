@@ -1,26 +1,26 @@
 import './App.css';
 import { Form } from './components/Form';
-import { MessageList } from './components/MessageList/MessageList';
-import {ChatList} from "./components/ChatList/ChatList";
-import { Grid, Container, Box } from '@mui/material';
+import { MessageList } from 'components/MessageList/MessageList';
+import { ChatList } from "components/ChatList/ChatList";
+import { Grid, Box } from '@mui/material';
 
-import { useState, useEffect } from 'react';
-import { AUTHOR } from './constants';
+import { useState, useEffect, FC } from 'react';
+import { Messages, Message, AUTHOR } from './types'
 
-export const App = () => {
-  const [messages, setMessages] = useState([]);
+export const App: FC = () => {
+  const [messages, setMessages] = useState<Messages>([]);
 
-  const addMessage = (newMessage) => {
+  const addMessage = (newMessage: Message) => {
       // setMessages([...messages, newMessage])
       setMessages((prevMessages) => [...prevMessages, newMessage]);
   }
 
   useEffect(() => {
     if (messages.length > 0 &&
-        messages[messages.length - 1].author === AUTHOR.user) {
+        messages[messages.length - 1].author === AUTHOR.USER) {
         const timeout = setTimeout( () => {
             addMessage({
-                author: AUTHOR.bot,
+                author: AUTHOR.BOT,
                 value: 'I am Bot'
             });
         }, 1000);
