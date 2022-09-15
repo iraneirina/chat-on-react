@@ -116,3 +116,4 @@ module.exports = {
         extensions: ['.jsx', '.js', '.ts', '.tsx'],
     },
 };
+
