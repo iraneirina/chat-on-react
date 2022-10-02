@@ -33,7 +33,9 @@ export const Form: FC<FormProps> = ({ addMessage }) => {
             autoFocus
             inputProps={{'data-testid': 'input'}}
         />
-        <Button label="send" disabled={!value}/>
+        <Button disabled={!value} render={(label: string) => <div>{label}</div>}>
+            send
+        </Button>
     </form>
   );
 };
