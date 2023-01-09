@@ -13,7 +13,7 @@ export const Main: FC = () => (
       >
         <h1 className="head-text">Main page</h1>
         <p className="secondary-text">
-          Welcome to our project! <br /> Here you can chat with a bot, and soon
+          Welcome to my project! <br /> Here you can chat with a bot, and soon
           possibly with real people.
           <br /> To get started, sign up or login.
         </p>
