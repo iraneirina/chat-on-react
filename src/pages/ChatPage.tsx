@@ -15,19 +15,21 @@ export const ChatPage: FC = () => {
     return <Navigate to="/chats" replace />;
   }
 
+  const visible = false;
+
   return (
     <>
       <div className="page-container">
         <div className="chatPage-container">
-          <Grid container spacing={2}>
-            <Grid item xs={4}>
-              <ChatList />
-            </Grid>
-            <Grid item xs={8} sx={{ borderLeft: ' solid #d3d3d3' }}>
-              <MessageList messages={chatId ? messages[chatId] : []} />
-              <Form />
-            </Grid>
-          </Grid>
+          <div className="chatList-container">
+            <ChatList />
+          </div>
+          <div className="messages-list">
+            <MessageList messages={chatId ? messages[chatId] : []} />
+          </div>
+          <div className="messages-form">
+            <Form />
+          </div>
         </div>
       </div>
     </>

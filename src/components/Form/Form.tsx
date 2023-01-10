@@ -31,7 +31,7 @@ export const Form: FC = memo(() => {
   };
 
   return (
-    <div className="form-container">
+    <div className="send-message-form">
       {!chatId ? null : (
         <Box
           component="form"
@@ -39,16 +39,15 @@ export const Form: FC = memo(() => {
           onSubmit={handleSubmit}
           sx={{ display: 'flex', alignItems: 'center' }}
         >
-          <div>
+          <div className="textField-form">
             <TextField
               value={value}
               onChange={(e) => setValue(e.target.value)}
               label="Message..."
               variant="filled"
               autoFocus
-              //multiline
+              fullWidth
               inputProps={{ 'data-testid': 'input' }}
-              sx={{ width: '58vw' }}
             />
           </div>
           <div>

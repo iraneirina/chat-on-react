@@ -43,13 +43,8 @@ export const ChatList: FC = () => {
     <>
       <div className="main-container-chats">
         <div className="chats-form">
-          <div>
-            <IconButton>
-              <ArrowBackIcon />
-            </IconButton>
-          </div>
           <Box
-            sx={{ display: 'flex', paddingTop: '10px', paddingRight: '5px' }}
+            className="new-chat-form"
             component="form"
             autoComplete="off"
             onSubmit={handleSubmit}
@@ -62,7 +57,6 @@ export const ChatList: FC = () => {
               value={value}
               onChange={(e) => setValue(e.target.value)}
               required
-              sx={{ width: '40ch' }}
             />
             <IconButton
               color="primary"
@@ -75,10 +69,10 @@ export const ChatList: FC = () => {
           </Box>
         </div>
         <div className="chats-container">
-          <List sx={{ width: '100%' }}>
+          <List>
             {chats.map((chat) => (
               <ListItem
-                sx={{ borderBottom: 'solid #d3d3d3', paddingLeft: '0px' }}
+                className="chat-list"
                 key={chat.id}
                 secondaryAction={
                   <IconButton
@@ -86,15 +80,10 @@ export const ChatList: FC = () => {
                     aria-label="delete"
                     onClick={() => dispatch(deleteChat(chat.name))}
                   >
-                    <DeleteIcon sx={{ color: '#f8a7a7' }} />
+                    <DeleteIcon className="delete-btn" />
                   </IconButton>
                 }
               >
-                <ListItemAvatar>
-                  <Avatar>
-                    <Person2RoundedIcon />
-                  </Avatar>
-                </ListItemAvatar>
                 <NavLink
                   className="chat-item"
                   to={`/chats/${chat.name}`}

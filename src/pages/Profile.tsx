@@ -5,6 +5,7 @@ import { selectName, selectVisible } from 'src/store/profile/selectors';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import { addChat } from 'store/messages/slice';
 
 export const Profile: FC = () => {
   const dispatch = useDispatch();
@@ -15,18 +16,19 @@ export const Profile: FC = () => {
 
   const isEmptyField = !value;
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    dispatch(changeName(value));
+    setValue('');
+  };
+
   return (
     <>
       <div className="page-container">
         <div className="main-container">
           <h2 className="head-text">Profile</h2>
           <p className="secondary-text">Your name: {name}</p>
-          <p className="secondary-text">Change name:</p>
-          <Box
-            component="form"
-            autoComplete="off"
-            onSubmit={() => dispatch(toggleProfile())}
-          >
+          <Box component="form" autoComplete="off" onSubmit={handleSubmit}>
             <div
               style={{
                 display: 'flex',
@@ -52,11 +54,15 @@ export const Profile: FC = () => {
               </Button>
             </div>
           </Box>
-          <p className="secondary-text">visible: </p>
+          <p className="secondary-text">Visible for others: </p>
           <input type="checkbox" checked={visible} readOnly />
-          <button onClick={() => dispatch(toggleProfile())}>
+          <Button
+            variant="outlined"
+            onClick={() => dispatch(toggleProfile())}
+            sx={{ margin: '20px 0px' }}
+          >
             change visible
-          </button>
+          </Button>
         </div>
       </div>
     </>
