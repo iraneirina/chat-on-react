@@ -58,11 +58,12 @@ export const ChatList: FC = () => {
               onChange={(e) => setValue(e.target.value)}
               required
             />
+            <br />
             <IconButton
               color="primary"
               disabled={isEmptyField}
               type="submit"
-              sx={{ fontSize: '30px' }}
+              sx={{ fontSize: '35px' }}
             >
               <PersonAddAltRoundedIcon />
             </IconButton>
