@@ -96,6 +96,7 @@ body {
   grid-column: 2/4;
   overflow: auto;
   background-color: #F5F5F5;
+  border-radius: 10px;
 }
 
 .messages-form {
