@@ -89,6 +89,7 @@ export const Header: FC = () => {
                   color: '#FFFFFF',
                   border: 'solid #FFFFFF',
                   fontWeight: '700',
+                  paddingRight: '10px',
                 }}
                 variant="text"
                 onClick={handleLogout}
@@ -104,6 +105,7 @@ export const Header: FC = () => {
                     border: 'solid #FFFFFF',
                     marginRight: '15px',
                     fontWeight: '700',
+                    paddingRight: '10px',
                   }}
                   variant="text"
                   onClick={() => navigate('/signin')}
@@ -117,6 +119,7 @@ export const Header: FC = () => {
                     color: '#FFFFFF',
                     border: 'solid #FFFFFF',
                     fontWeight: '700',
+                    paddingRight: '10px',
                   }}
                   onClick={() => navigate('/signup')}
                 >

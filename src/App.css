@@ -13,7 +13,7 @@ body {
 .App {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  height: 100%;
+  height: 100vh;
 }
 
 .page-container {
@@ -47,6 +47,12 @@ body {
   border-bottom: solid #4682B4;
 }
 
+@media (max-width: 380px) {
+  .menuLink {
+    font-size: 10px;
+  }
+}
+
 .head-text {
   font-size: 30px;
 }
@@ -63,39 +69,42 @@ body {
   max-width: 150px;
 }
 
-.chats-main{
-  display: flex;
-  justify-content: space-between;
-}
-
-.main-container-chats{
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  height: 75vh;
-}
-
 .chatPage-container {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 3fr 1fr ;
+  grid-gap: 1em;
+  justify-items: stretch;
+  align-items: stretch;
   height: 75vh;
 }
 
-.chats-container {
-
+@media (max-width: 380px) {
+  .chatPage-container {
+    grid-gap: 0em;
+  }
 }
 
-.messages-block {
-  position: absolute;
-  top: 0;
+.chatList-container {
+  grid-row: 1/4;
+  grid-column: 1/2;
   overflow: auto;
-  height: 67vh;
-  width: 65%;
 }
 
-.form-container {
-  position: absolute;
-  bottom: 0;
-  width: 65%;
+.messages-list {
+  grid-row: 1/3;
+  grid-column: 2/4;
+  overflow: auto;
+  background-color: #F5F5F5;
+}
+
+.messages-form {
+  grid-row: 3/4;
+  grid-column: 2/4;
+}
+
+.textField-form {
+  flex-grow: 2;
 }
 
 .chat-item {
@@ -104,28 +113,19 @@ body {
   color: #7b7b7b;
   font-weight: 400;
   font-weight: 700;
-  padding-right: 60px;
   overflow-wrap: break-word;
-  width: 26vh;
 }
 
-/*.textToRightSide {*/
-/*  text-align: right;*/
-/*  margin-bottom: 50px;*/
+@media (max-width: 380px) {
+  .chat-item {
+    font-size: 13px;
+  }
+}
 
-/*@media (max-width: 600px) {*/
-/*//font-size: 22px;*/
-/*  margin-bottom: 30px;*/
-/*}*/
-/*}*/
+.delete-btn {
+  color: #f8a7a7;
+}
 
 
-/*.avatar-logo {*/
-/*  width: 98px;*/
-/*  height: 98px;*/
-/*  text-align: center;*/
-/*  background: #FFFFFF;*/
-/*  border-radius: 50%;*/
-/*  text-transform: uppercase;*/
-/*  margin: 10px auto 40px;*/
-/*  display: block;*/
+
+

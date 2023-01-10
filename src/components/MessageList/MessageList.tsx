@@ -11,7 +11,7 @@ export const MessageList: FC<MessageListProps> = ({ messages }) => {
     <div className="messages-block">
       <List>
         {messages.map((message, idx) => (
-          <ListItem className="message" key={idx} data-testid="li">
+          <ListItem className="message-list" key={idx} data-testid="li">
             {message.author}: {message.value}
           </ListItem>
         ))}

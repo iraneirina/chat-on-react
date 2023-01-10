@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 const initialState = {
-  name: 'gb',
+  name: '...',
   visible: true,
   isAuth: false,
 };
