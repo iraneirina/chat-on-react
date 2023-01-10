@@ -48,7 +48,7 @@ export const addMessageWithReply = createAsyncThunk(
             chatName,
             message: {
               author: AUTHOR.BOT,
-              value: 'Hallo! Now we can not answer. Please try later',
+              value: 'Hello! Now we can not answer. Please try later',
             },
           })
         );
