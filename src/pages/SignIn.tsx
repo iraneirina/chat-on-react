@@ -52,7 +52,6 @@ export const SignIn: FC = () => {
             >
               <TextField
                 sx={{ marginBottom: '20px' }}
-                id="outlined-basic"
                 label="Login"
                 variant="outlined"
                 type="email"
@@ -61,7 +60,6 @@ export const SignIn: FC = () => {
                 required
               />
               <TextField
-                id="outlined-basic"
                 label="Password"
                 variant="outlined"
                 type="password"

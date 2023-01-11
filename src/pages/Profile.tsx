@@ -5,7 +5,6 @@ import { selectName, selectVisible } from 'src/store/profile/selectors';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import { addChat } from 'store/messages/slice';
 
 export const Profile: FC = () => {
   const dispatch = useDispatch();

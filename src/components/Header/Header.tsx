@@ -62,22 +62,13 @@ export const Header: FC = () => {
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <HiveIcon sx={{ display: 'flex' }} />
+              <HiveIcon sx={{ display: 'flex', paddingRight: '20px' }} />
               <Typography
                 variant="h6"
                 noWrap
                 component="a"
                 href="/"
-                sx={{
-                  display: 'flex',
-                  fontFamily: 'monospace',
-                  fontWeight: 600,
-                  letterSpacing: '.3rem',
-                  color: 'inherit',
-                  textDecoration: 'none',
-                  marginLeft: '10px',
-                  fontSize: '30px',
-                }}
+                className="header-text"
               >
                 MESSENGER
               </Typography>
@@ -85,7 +76,7 @@ export const Header: FC = () => {
             {isAuth ? (
               <Button
                 sx={{
-                  fontSize: '20px',
+                  fontSize: '14px',
                   color: '#FFFFFF',
                   border: 'solid #FFFFFF',
                   fontWeight: '700',
@@ -100,7 +91,7 @@ export const Header: FC = () => {
               <div>
                 <Button
                   sx={{
-                    fontSize: '20px',
+                    fontSize: '14px',
                     color: '#FFFFFF',
                     border: 'solid #FFFFFF',
                     marginRight: '15px',
@@ -115,7 +106,7 @@ export const Header: FC = () => {
                 <Button
                   variant="text"
                   sx={{
-                    fontSize: '20px',
+                    fontSize: '14px',
                     color: '#FFFFFF',
                     border: 'solid #FFFFFF',
                     fontWeight: '700',
