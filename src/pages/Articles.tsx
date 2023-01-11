@@ -4,12 +4,13 @@ import { ThunkDispatch } from '@reduxjs/toolkit';
 import { StoreState } from 'src/store';
 import { fetchData } from 'src/store/articles/slice';
 import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
-import { Card, CardContent, IconButton, List, Typography } from '@mui/material';
+import { IconButton, List } from '@mui/material';
 import ListItem from '@mui/material/ListItem';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 interface IArticles {
   id: string;
   title: string;
+  summary: string;
 }
 
 export const Articles: FC = () => {
@@ -37,7 +38,13 @@ export const Articles: FC = () => {
               <ReplayRoundedIcon />
             </IconButton>
           </div>
-          <div style={{ display: 'flex' }}>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              paddingBottom: '3em',
+            }}
+          >
             <List>
               {articles.map((acticle) => (
                 <ListItem key={acticle.id}>{acticle.title}</ListItem>

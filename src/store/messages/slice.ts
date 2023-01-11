@@ -3,9 +3,9 @@ import { nanoid } from 'nanoid';
 import { AUTHOR, Message, MessagesWithId } from 'src/types';
 
 const initialState: MessagesWithId = {
-  first: [{ id: '1', author: AUTHOR.USER, value: 'hello, world' }],
-  second: [{ id: '2', author: AUTHOR.BOT, value: 'hello, im bot' }],
-  third: [{ id: '3', author: AUTHOR.BOT, value: 'hello, im bot' }],
+  first: [{ id: '1', author: AUTHOR.BOT, value: 'hi, it is bot' }],
+  second: [{ id: '2', author: AUTHOR.BOT, value: 'hello, it is second bot' }],
+  third: [{ id: '3', author: AUTHOR.BOT, value: 'hello, it is bot N3' }],
 };
 
 const messagesSlice = createSlice({

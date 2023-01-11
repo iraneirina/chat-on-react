@@ -1,24 +1,18 @@
 import {
-  Avatar,
   Box,
-  Button,
   IconButton,
   List,
   ListItem,
-  ListItemAvatar,
-  ListItemButton,
   TextField,
   Typography,
 } from '@mui/material';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FC, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addChat, deleteChat } from 'src/store/messages/slice';
 import { selectChats } from 'src/store/messages/selectors';
-import Person2RoundedIcon from '@mui/icons-material/Person2Rounded';
 import DeleteIcon from '@mui/icons-material/Delete';
 import PersonAddAltRoundedIcon from '@mui/icons-material/PersonAddAltRounded';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export const ChatList: FC = () => {
   const [value, setValue] = useState('');
@@ -55,6 +49,7 @@ export const ChatList: FC = () => {
               variant="filled"
               type="text"
               value={value}
+              fullWidth
               onChange={(e) => setValue(e.target.value)}
               required
             />
