@@ -27,7 +27,7 @@ body {
   margin: 0 auto;
   max-width: 1140px;
   color: #000000;
-  text-align: center
+  text-align: center;
 }
 
 .header-text {
@@ -131,7 +131,7 @@ body {
   display: block;
   position: absolute;
   top: 8.5rem;
-  left: 2rem;
+  left: 5rem;
 }
 
 .chatList-container {

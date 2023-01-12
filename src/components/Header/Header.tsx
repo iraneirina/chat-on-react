@@ -62,7 +62,7 @@ export const Header: FC = () => {
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <HiveIcon sx={{ display: 'flex', paddingRight: '20px' }} />
+              <HiveIcon sx={{ display: 'flex', paddingRight: '20px', position: 'relative' }} />
               <Typography
                 variant="h6"
                 noWrap
