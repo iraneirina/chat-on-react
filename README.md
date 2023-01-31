@@ -11,7 +11,7 @@
 * Верстка адаптивна под все устройства, окно чата скрывается и показывается по клику.
 
 ## Инструменты:
-* Верстка реализована с помощью Material UI
+* Верстка реализована с помощью Material UI и CSS
 * Использовались JavaScript и TypeScript
-* Использовался React, Redux, Redux Toolkit
+* Использовался React, React Router, Redux, Redux Toolkit
 * Webpack, Babel, ESLint, Firebase
